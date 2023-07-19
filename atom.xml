@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>yichuanp</title>
   
-  
+  <subtitle>这是我的个人站，用于记录、日志和文档分享</subtitle>
   <link href="https://yichuan-acc.github.io/atom.xml" rel="self"/>
   
   <link href="https://yichuan-acc.github.io/"/>
@@ -23,34 +23,12 @@
     <published>2023-07-19T02:22:52.000Z</published>
     <updated>2023-07-19T02:24:22.011Z</updated>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;span</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://yichuan-acc.github.io/2023/07/19/hello-world/"/>
-    <id>https://yichuan-acc.github.io/2023/07/19/hello-world/</id>
-    <published>2023-07-19T01:57:02.134Z</published>
-    <updated>2023-07-19T01:57:02.134Z</updated>
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
     
     
       
       
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;</summary>
       
     
     
