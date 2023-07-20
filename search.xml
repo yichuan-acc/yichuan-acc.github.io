@@ -8,7 +8,7 @@
       <link href="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/"/>
       <url>/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/</url>
       
-        <content type="html"><![CDATA[<h1>hexo图片路径配置方法</h1><blockquote><p>hexo写博客添加图片时总是出现错误，这里终于给出方法</p></blockquote><p>首先设置typora路径配置，为当前路径下与文件名同名文件夹</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170045612.png" class title="image-20230719170045612"><p>_config.yml文件设置一定要设置 relative_link:false 一定要把这个关闭</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170237902.png" class title="image-20230719170237902"><p>下载包，或者GitHub自行下载</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-asset-image<br><br><br></code></pre></td></tr></table></figure><span id="more"></span>]]></content>
+        <content type="html"><![CDATA[<h1 id="hexo图片路径配置方法"><a href="#hexo图片路径配置方法" class="headerlink" title="hexo图片路径配置方法"></a>hexo图片路径配置方法</h1><blockquote><p>hexo写博客添加图片时总是出现错误，这里终于给出方法</p></blockquote><p>首先设置typora路径配置，为当前路径下与文件名同名文件夹</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170045612.png" class title="image-20230719170045612"><p>_config.yml文件设置一定要设置 relative_link:false 一定要把这个关闭</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170237902.png" class title="image-20230719170237902"><p>下载包，或者GitHub自行下载</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-asset-image<br><br><br></code></pre></td></tr></table></figure><span id="more"></span>]]></content>
       
       
       <categories>
@@ -35,7 +35,7 @@
       <link href="/2023/07/19/test/"/>
       <url>/2023/07/19/test/</url>
       
-        <content type="html"><![CDATA[<h1>标题</h1><blockquote><p>前言、目的、摘要</p></blockquote><p>------删除<br>tags:</p><ul><li>属性</li><li>标签</li><li>天气</li><li>关键字</li></ul><p>categories: 种类[日志 | 经验 | 分享]<br>------删除</p><img src="/2023/07/19/test/traffic.png" class title="traffic"><span id="more"></span>]]></content>
+        <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><blockquote><p>前言、目的、摘要</p></blockquote><p>——删除<br>tags: </p><ul><li>属性</li><li>标签</li><li>天气</li><li>关键字</li></ul><p>categories: 种类[日志 | 经验 | 分享]<br>——删除</p><img src="/2023/07/19/test/traffic.png" class title="traffic"><span id="more"></span>]]></content>
       
       
       <categories>

@@ -23,17 +23,22 @@
     <published>2023-07-19T08:58:45.000Z</published>
     <updated>2023-07-19T09:03:56.014Z</updated>
     
-    <content type="html"><![CDATA[<h1>hexo图片路径配置方法</h1><blockquote><p>hexo写博客添加图片时总是出现错误，这里终于给出方法</p></blockquote><p>首先设置typora路径配置，为当前路径下与文件名同名文件夹</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170045612.png" class title="image-20230719170045612"><p>_config.yml文件设置一定要设置 relative_link:false 一定要把这个关闭</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170237902.png" class title="image-20230719170237902"><p>下载包，或者GitHub自行下载</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-asset-image<br><br><br></code></pre></td></tr></table></figure><span id="more"></span>]]></content>
+    <content type="html"><![CDATA[<h1 id="hexo图片路径配置方法"><a href="#hexo图片路径配置方法" class="headerlink" title="hexo图片路径配置方法"></a>hexo图片路径配置方法</h1><blockquote><p>hexo写博客添加图片时总是出现错误，这里终于给出方法</p></blockquote><p>首先设置typora路径配置，为当前路径下与文件名同名文件夹</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170045612.png" class title="image-20230719170045612"><p>_config.yml文件设置一定要设置 relative_link:false 一定要把这个关闭</p><img src="/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170237902.png" class title="image-20230719170237902"><p>下载包，或者GitHub自行下载</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-asset-image<br><br><br></code></pre></td></tr></table></figure><span id="more"></span>]]></content>
     
     
-    <summary type="html">&lt;h1&gt;hexo图片路径配置方法&lt;/h1&gt;
-&lt;blockquote&gt;
+    <summary type="html">&lt;h1 id=&quot;hexo图片路径配置方法&quot;&gt;&lt;a href=&quot;#hexo图片路径配置方法&quot; class=&quot;headerlink&quot; title=&quot;hexo图片路径配置方法&quot;&gt;&lt;/a&gt;hexo图片路径配置方法&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;hexo写博客添加图片时总是出现错误，这里终于给出方法&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;首先设置typora路径配置，为当前路径下与文件名同名文件夹&lt;/p&gt;
 &lt;img src=&quot;/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170045612.png&quot; class title=&quot;image-20230719170045612&quot;&gt;
+
+
+
 &lt;p&gt;_config.yml文件设置一定要设置 relative_link:false 一定要把这个关闭&lt;/p&gt;
 &lt;img src=&quot;/2023/07/19/hexo-tu-pian-lu-jing-she-zhi/image-20230719170237902.png&quot; class title=&quot;image-20230719170237902&quot;&gt;
+
+
+
 &lt;p&gt;下载包，或者GitHub自行下载&lt;/p&gt;
 &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs shell&quot;&gt;npm install hexo-asset-image&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
@@ -55,23 +60,20 @@
     <published>2023-07-19T08:46:15.000Z</published>
     <updated>2023-07-19T08:46:38.560Z</updated>
     
-    <content type="html"><![CDATA[<h1>标题</h1><blockquote><p>前言、目的、摘要</p></blockquote><p>------删除<br>tags:</p><ul><li>属性</li><li>标签</li><li>天气</li><li>关键字</li></ul><p>categories: 种类[日志 | 经验 | 分享]<br>------删除</p><img src="/2023/07/19/test/traffic.png" class title="traffic"><span id="more"></span>]]></content>
+    <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><blockquote><p>前言、目的、摘要</p></blockquote><p>——删除<br>tags: </p><ul><li>属性</li><li>标签</li><li>天气</li><li>关键字</li></ul><p>categories: 种类[日志 | 经验 | 分享]<br>——删除</p><img src="/2023/07/19/test/traffic.png" class title="traffic"><span id="more"></span>]]></content>
     
     
-    <summary type="html">&lt;h1&gt;标题&lt;/h1&gt;
-&lt;blockquote&gt;
+    <summary type="html">&lt;h1 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;前言、目的、摘要&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;------删除&lt;br&gt;
-tags:&lt;/p&gt;
+&lt;p&gt;——删除&lt;br&gt;tags: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;属性&lt;/li&gt;
 &lt;li&gt;标签&lt;/li&gt;
 &lt;li&gt;天气&lt;/li&gt;
 &lt;li&gt;关键字&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;categories: 种类[日志 | 经验 | 分享]&lt;br&gt;
-------删除&lt;/p&gt;
+&lt;p&gt;categories: 种类[日志 | 经验 | 分享]&lt;br&gt;——删除&lt;/p&gt;
 &lt;img src=&quot;/2023/07/19/test/traffic.png&quot; class title=&quot;traffic&quot;&gt;</summary>
     
     
