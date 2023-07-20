@@ -18,15 +18,15 @@
   <meta name="author" content="yichuanp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="记录、日志和文档分享">
+    <meta name="description" content=".ImageGrid {   width: 100%;   max-width: 1040px;   margin: 0 auto;   text-align: center; } .card {   overflow: hidden;   transition: .3s ease-in-out;   border-radius: 8px;   background-color: rgba(18">
 <meta property="og:type" content="website">
-<meta property="og:title" content="img">
-<meta property="og:url" content="https://yichuan-acc.github.io/img/index.html">
+<meta property="og:title" content="图集">
+<meta property="og:url" content="https://yichuan-acc.github.io/photos/index.html">
 <meta property="og:site_name" content="yichuanp">
-<meta property="og:description" content="记录、日志和文档分享">
+<meta property="og:description" content=".ImageGrid {   width: 100%;   max-width: 1040px;   margin: 0 auto;   text-align: center; } .card {   overflow: hidden;   transition: .3s ease-in-out;   border-radius: 8px;   background-color: rgba(18">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-19T05:03:59.000Z">
-<meta property="article:modified_time" content="2023-07-19T05:03:59.336Z">
+<meta property="article:published_time" content="2023-07-20T01:17:50.075Z">
+<meta property="article:modified_time" content="2023-07-20T01:17:50.075Z">
 <meta property="article:author" content="yichuanp">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -34,7 +34,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>img - yichuanp</title>
+  <title>图集 - yichuanp</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -166,6 +166,30 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/photos/">
+                <i class="iconfont icon-images"></i>
+                <span>相册</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -195,7 +219,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="img"></span>
+            <span id="subtitle" data-typed-text="图集"></span>
           
         </div>
 
@@ -223,7 +247,32 @@
                 
 
 <article class="page-content">
-  
+  <style>
+.ImageGrid {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: center;
+}
+.card {
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: 8px;
+  background-color: rgba(180,180,180,0.2);
+  padding: 1.4px;
+}
+.ImageInCard img {
+  padding: 0;
+  border-radius: 8px;
+  width:100%;
+  height:100%;
+}
+@media (prefers-color-scheme: dark) {
+  .card {background-color: rgba(180,180,180,0.2);}
+}
+</style>
+<div id="imageTab"></div>
+<div class="ImageGrid"></div>
 
   
 
@@ -373,5 +422,11 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-</body>
+<!-- hexo injector body_end start -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
+  <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lazyloadjs/3.2.2/lazyload.js"></script>
+    <script defer src="/js/photoWall.js"></script>
+    <!-- hexo injector body_end end --></body>
 </html>
