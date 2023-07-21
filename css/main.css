@@ -1531,6 +1531,9 @@ post-custom {
 .post-content img {
   object-fit: cover;
   max-width: 100%;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 @media (max-width: 767px) {
   .page-content,

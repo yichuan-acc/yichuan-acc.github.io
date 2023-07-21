@@ -4,6 +4,89 @@
   
   
   <entry>
+    <title>【工具】文件格式转化代码</title>
+    <link href="/2023/07/21/gong-ju-wen-jian-ge-shi-zhuan-hua-dai-ma/"/>
+    <url>/2023/07/21/gong-ju-wen-jian-ge-shi-zhuan-hua-dai-ma/</url>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>日常使用和进行编码的过程中，往往会出现文件编码问题，这里对文件的编码进行解决</p></blockquote><span id="more"></span><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> codecs<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">import</span> shutil<br><span class="hljs-keyword">import</span> re<br><span class="hljs-keyword">import</span> chardet<br><br>convertdir = <span class="hljs-string">&#x27;.&#x27;</span><br><span class="hljs-comment"># convertfiletypes = [&quot;.c&quot;,&quot;cpp&quot;,&quot;h&quot;]</span><br>convertfiletypes = [<span class="hljs-string">&quot;.txt&quot;</span>,<span class="hljs-string">&quot;.xml&quot;</span>,<span class="hljs-string">&quot;.bat&quot;</span>,<span class="hljs-string">&quot;.h&quot;</span>,<span class="hljs-string">&quot;.cpp&quot;</span>]<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">convert_encoding</span>(<span class="hljs-params">filename, target_encoding</span>):<br>    <span class="hljs-comment"># Backup the origin file.</span><br><br>    <span class="hljs-comment"># convert file from the source encoding to target encoding</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename,<span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> f:<br>        content = f.read()<br>    source_encoding = chardet.detect(content)[<span class="hljs-string">&#x27;encoding&#x27;</span>]<br>    content = content.decode(source_encoding, <span class="hljs-string">&#x27;ignore&#x27;</span>)<span class="hljs-comment"># .encode(source_encoding)</span><br>    <span class="hljs-comment"># 将文件内容转换为目标编码并写入文件</span><br>    <span class="hljs-keyword">with</span> codecs.<span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;w&#x27;</span>, encoding=target_encoding) <span class="hljs-keyword">as</span> f:<br>        f.write(content)<br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&#x27;success:&#x27;</span>,filename, <span class="hljs-string">&#x27;[from&#x27;</span>, source_encoding,<span class="hljs-string">&#x27;--&gt;&#x27;</span>,target_encoding,<span class="hljs-string">&#x27;]&#x27;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():<br>    <span class="hljs-keyword">for</span> root, dirs, files <span class="hljs-keyword">in</span> os.walk(convertdir):<br>        <span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> files:<br>            <span class="hljs-keyword">for</span> filetype <span class="hljs-keyword">in</span> convertfiletypes:<br>                <span class="hljs-keyword">if</span> f.lower().endswith(filetype):<br>                    filename = os.path.join(root, f)<br>                    <br>                    <span class="hljs-keyword">try</span>:<br>                        convert_encoding(filename, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>                    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>                        <span class="hljs-built_in">print</span> (<span class="hljs-string">&#x27;error&#x27;</span>,filename)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    main()<br></code></pre></td></tr></table></figure><p>下次找个时间把它写成工具包</p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="www.baidu.com">百度</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>字符格式</tag>
+      
+      <tag>编码</tag>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【HoloCubic】生成PCB制作文件及打样流程</title>
+    <link href="/2023/07/21/holocubic-sheng-cheng-pcb-zhi-zuo-wen-jian-ji-da-yang-liu-cheng/"/>
+    <url>/2023/07/21/holocubic-sheng-cheng-pcb-zhi-zuo-wen-jian-ji-da-yang-liu-cheng/</url>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>开启HoloCubic项目第一集</p></blockquote><span id="more"></span><h2 id="Altium-Disigner的使用快捷键"><a href="#Altium-Disigner的使用快捷键" class="headerlink" title="Altium Disigner的使用快捷键"></a>Altium Disigner的使用快捷键</h2><p><strong>右键</strong> 拖动元器件</p><p><strong>Shift+右键</strong> 旋转元器件</p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="www.baidu.com">百度</a></p><p><a href="https://www.bilibili.com/video/BV11h41147iJ">一叶知秋君莫笑我</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>t1</tag>
+      
+      <tag>t2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【NCDSDK】项目结构和样式</title>
+    <link href="/2023/07/20/ncdsdk-xiang-mu-jie-gou-he-yang-shi/"/>
+    <url>/2023/07/20/ncdsdk-xiang-mu-jie-gou-he-yang-shi/</url>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>工作项目代码学习记录</p></blockquote><span id="more"></span><h2 id="代码结构一览"><a href="#代码结构一览" class="headerlink" title="代码结构一览"></a>代码结构一览</h2><img src="/2023/07/20/ncdsdk-xiang-mu-jie-gou-he-yang-shi/image-20230720162935463.png" alt="image-20230720162935463" style="zoom:67%;"><p>主要是有一些批处理文件 publish-*.bat 、一些</p><h2 id="Readme文件"><a href="#Readme文件" class="headerlink" title="Readme文件"></a>Readme文件</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stata">1、开发包压缩文件解压后，请先运行init.bat批处理文件进行开发包环境初始化，初始化过程主要是完成测试工程的在bin\<span class="hljs-keyword">test</span>中的运行工程，同时将静态google测试<br>库复制到每个<span class="hljs-keyword">test</span>工程下。<br>2、<span class="hljs-keyword">clear</span>.bat可用于清理VS编译器在编译工程代码时生成的临时文件，将工程的大小控制在合理的大小范围，建议在将程序进行归档前使用该批处理文件。<br></code></pre></td></tr></table></figure><p>进行相应的初始化</p><h2 id="批处理文件"><a href="#批处理文件" class="headerlink" title="批处理文件"></a>批处理文件</h2><h3 id="相关命令行的意义"><a href="#相关命令行的意义" class="headerlink" title="相关命令行的意义"></a>相关命令行的意义</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">@REM 表示添加注释<br><br>cls 表示清空终端<br><br>@<span class="hljs-built_in">echo</span> off 表示关闭回显<br><br><span class="hljs-built_in">set</span> 表示设置变量<br><br><span class="hljs-keyword">for</span> /d %%a <span class="hljs-keyword">in</span> (%testDir%\*) <span class="hljs-keyword">do</span> xcopy %~dp0\packages %%a\packages\ /e /y<br><span class="hljs-keyword">for</span>循环表示 使用%%a变量在 testDir文件夹下的子目录<br>执行任务由 <span class="hljs-keyword">do</span> 引导<br></code></pre></td></tr></table></figure><h3 id="详解init-bat"><a href="#详解init-bat" class="headerlink" title="详解init.bat"></a>详解init.bat</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs bash">@REM 清空终端<br>cls<br><br>@REM 关闭回显，只显示结果，不显示运行过程<br>@<span class="hljs-built_in">echo</span> off <br><br>@REM 输出语句<br>@<span class="hljs-built_in">echo</span> 完成开发环境的配置<br><br>@REM 复制运行环境到<span class="hljs-built_in">test</span>目录 %~dp0表示当前批处理文件的完整路径，这里表示把bin目录下所有的动态库文件复制到<span class="hljs-built_in">test</span>目录下<br>copy %~dp0\bin\*.dll  %~dp0\bin\<span class="hljs-built_in">test</span>\*.dll<br><br>@REM 设置变量 testDir 为<span class="hljs-built_in">test</span>文件夹路径<br><span class="hljs-built_in">set</span> testDir=%~dp0\<span class="hljs-built_in">test</span><br><br>@REM <span class="hljs-keyword">for</span> /d 是循环命令，用于遍历指定目录下所有的子目录 临时变量 %%a 取 (%testDir%\*) 中的每一个子目录执行 <span class="hljs-keyword">do</span><br>@REM <span class="hljs-keyword">do</span> 引导 所做的命令 xcopy 表示复制命令，复制 源目录的 packages文件 到 testDir中的packages中 /e 表示复制目录和子目录，即使为空 /y回答是<br><span class="hljs-keyword">for</span> /d %%a <span class="hljs-keyword">in</span> (%testDir%\*) <span class="hljs-keyword">do</span> xcopy %~dp0\packages  %%a\packages\ /e  /y<br><br>@REM 暂停执行，等待用户任意键继续<br>pause<br><br>@REM 复制当前目录下 bin 下所有的 .dll 文件到 <span class="hljs-built_in">test</span> 目录下<br>@REM <span class="hljs-keyword">for</span> 循环使用临时变量 %%a 把 当前目录 packages 下的文件复制到 <span class="hljs-built_in">test</span> 目录各子目录中<br></code></pre></td></tr></table></figure><h3 id="详解publish-bat"><a href="#详解publish-bat" class="headerlink" title="详解publish.bat"></a>详解publish.bat</h3><p>这个是把执行文件发布到publish文件夹中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs bash">cls<br>@<span class="hljs-built_in">echo</span> off<br>@<span class="hljs-built_in">echo</span> 发布可执行程序<br><span class="hljs-built_in">mkdir</span>  %~dp0\publish<br>copy   %~dp0\bin\*.exe      %~dp0\publish\*.exe<br>copy   %~dp0\bin\*.xml      %~dp0\publish\*.xml<br>copy   %~dp0\bin\*.bat      %~dp0\publish\*.bat<br>copy   %~dp0\bin\*.dll      %~dp0\publish\*.dll<br>copy   %~dp0\bin\*.json      %~dp0\publish\*.json <br>@REM 复制x64<br><span class="hljs-built_in">mkdir</span>  %~dp0\publish\x64<br>copy   %~dp0\bin\x64\*.dll  %~dp0\publish\x64\*.*  <br>@<span class="hljs-built_in">echo</span> 复制资源<br><span class="hljs-built_in">mkdir</span>  %~dp0\publish\sysres<br>xcopy %~dp0\bin\sysres   %~dp0\publish\sysres\ /e /y<br><span class="hljs-built_in">mkdir</span>  %~dp0\publish\sample<br>xcopy %~dp0\bin\sample   %~dp0\publish\sample\ /e /y<br><span class="hljs-built_in">mkdir</span>  %~dp0\publish\<span class="hljs-built_in">help</span><br>xcopy %~dp0\bin\<span class="hljs-built_in">help</span>   %~dp0\publish\<span class="hljs-built_in">help</span>\ /e /y<br><br>del   %~dp0\publish\NCDKeyGen.exe<br>del   %~dp0\publish\TimeFlash.exe<br></code></pre></td></tr></table></figure><p>这个 publish.bat 文件把文件部署到。目录 \publish 下</p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="www.baidu.com">百度</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>保密</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工作</tag>
+      
+      <tag>项目</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【hexo】视频播放</title>
     <link href="/2023/07/20/hexo-shi-pin-bo-fang/"/>
     <url>/2023/07/20/hexo-shi-pin-bo-fang/</url>
@@ -76,13 +159,13 @@
     
     <tags>
       
+      <tag>hexo</tag>
+      
       <tag>hexo图片</tag>
       
       <tag>hexo路径配置</tag>
       
       <tag>经验</tag>
-      
-      <tag>hexo</tag>
       
     </tags>
     
